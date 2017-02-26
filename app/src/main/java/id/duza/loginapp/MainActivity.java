@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // method untuk validasi data jika user&pass nya bener maka return true else return false
     private boolean isValid()   {
         // mengambil text dari EditText etUsername lalu dikonvert ke String
         username = etUsername.getText().toString();
@@ -92,8 +93,14 @@ public class MainActivity extends AppCompatActivity {
     //digunakan untuk menginisialisasi variable etUsername, etPassword, btnLogin
     //Knp dibuat method ini,,, karena biar rapi :)
     private void setupView() {
+        // findViewById(..) : untuk mencari view menggunakan id
+        // dengan begitu berarti kita sudah merekatkan variablenya dengan view nya
         etUsername = (EditText) findViewById(R.id.et_main_username);
         etPassword = (EditText) findViewById(R.id.et_main_password);
         btnLogin = (Button) findViewById(R.id.btn_login);
+        // kok EditText nya didalem kurung?? (EditText)
+        // findViewById mengembalikan type data View, sedangkan
+        // variable yang kita buat menggunakan variable EditText, Button
+        // Berarti kita butuh type casting dari view ke EditText / Button
     }
 }
